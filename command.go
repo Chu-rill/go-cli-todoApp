@@ -10,6 +10,7 @@ import (
 
 type CmdFlags struct  {
 	Add string
+	Help string
 	Del int
 	Edit string
 	Toggle int
@@ -20,6 +21,7 @@ func NewCmdFlags() *CmdFlags{
 	cf := CmdFlags{}
 
 	flag.StringVar(&cf.Add,"add","","Add a new todo specify title")
+	flag.StringVar(&cf.Help,"help","","list all the performable task")
 	flag.StringVar(&cf.Edit,"Edit","","Edit a todo by index & specify a new title, id:new_title")
 	flag.IntVar(&cf.Del,"del",-1,"Specify a todo by index to delete")
 	flag.IntVar(&cf.Toggle,"toggle",-1,"Specify a todo by index to toggle")
