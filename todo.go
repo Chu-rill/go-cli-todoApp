@@ -45,7 +45,7 @@ func (todos *Todos) delete(index int)error{
 	if err := t.validateIndex(index); err != nil{
 		return err
 	}
-	fmt.Println("Fuck Franklin")
+	// fmt.Println("Fuck Franklin")
 
 	*todos = append(t[:index], t[index+1:]...)
 	return nil
