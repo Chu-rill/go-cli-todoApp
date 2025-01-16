@@ -46,6 +46,7 @@ func (todos *Todos) delete(index int)error{
 		return err
 	}
 	fmt.Println("Fuck Franklin")
+	fmt.Println("I need to keep the streak alive")
 
 	*todos = append(t[:index], t[index+1:]...)
 	return nil
